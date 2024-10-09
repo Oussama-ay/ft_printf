@@ -5,10 +5,7 @@ int	f2_print(char *t, int n)
 	int	s;
 
 	if (n <= 15)
-	{
-		print_char(t[n]);
-		return (1);
-	}
+		return (print_char(t[n]));
 	s = print_int(n / 16);
 	print_char(t[n %  16]);
 	return (1 + s);
