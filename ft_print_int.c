@@ -15,10 +15,7 @@ int	print_int(int	n)
 		print_int(-n);
 	}
 	if (n <= 9)
-	{
-		print_char(n + '0');
-		return (1);
-	}
+		return (print_char(n + '0'));
 	s = print_int(n / 10);
 	print_char(n % 10 + '0');
 	return (1 + s);
