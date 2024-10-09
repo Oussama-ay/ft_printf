@@ -5,10 +5,7 @@ int	print_int(int	n)
 	int	s;
 
 	if (n == -2147483648)
-	{
-		print_str("-2147483648");
-		return (11);
-	}
+		return (print_str("-2147483648"));
 	if (n < 0)
 	{
 		print_char('-');
