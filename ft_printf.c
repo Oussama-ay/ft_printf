@@ -3,19 +3,19 @@
 int	find_flag(va_list arg, char const flag)
 {
 	if (flag == 'i' || flag == 'd')
-		return (ft_print_int(va_list(arg, int)));
+		return (print_int(va_list(arg, int)));
 	else if (flag == 'c')
-		return (ft_print_char(va_list(arg, char)));
+		return (print_char(va_list(arg, char)));
 	else if (flag == 's')
-		return (ft_print_str(va_list(arg, char *)));
+		return (print_str(va_list(arg, char *)));
 	else if (flag == 'p')
-		return (ft_print_address(va_list(arg, void *)));
+		return (print_address(va_list(arg, void *)));
 	else if (flag == 'u')
-		return (ft_print_uint(va_list(arg, unsigned int)));
+		return (print_uint(va_list(arg, unsigned int)));
 	else if (flag == 'x')
-		return (ft_print_lhexa(va_list(arg, int)));
+		return (print_lhexa(va_list(arg, int)));
 	else if (flag == 'X')
-		return (ft_print_uhexa(va_list(arg, int)));
+		return (print_uhexa(va_list(arg, int)));
 	else if (flag == '%')
 		return (ft_print_char('%'));
 	return (0);
