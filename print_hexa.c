@@ -18,6 +18,6 @@ int	print_hexa(int n, char c)
 	if (c == 'X')
 		t = "0123456789ABCDEF";
 	else
-		t = "0123456789abcef";
+		t = "0123456789abcdef";
 	return (f2_print(t, n));
 }
