@@ -29,10 +29,10 @@ BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): ffclean $(OBJS)
 		ar rcs $(NAME) $(OBJS)
 
-bonus: $(BONUS_OBJS)
+bonus: ffclean $(BONUS_OBJS)
 	ar rcs $(NAME) $(BONUS_OBJS)
 
 %.o: %.c
@@ -44,6 +44,9 @@ clean:
 fclean:	clean
 		rm -rf $(NAME)
 
+ffclean:
+	rm -f $(NAME)
+
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
