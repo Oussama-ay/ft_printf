@@ -43,7 +43,7 @@ int	ft_printf(const char *format, ...)
 	length = 0;
 	while (*format)
 	{
-		if (*format == '%')
+		if (*format == '%' && *(format + 1) != '\0')
 		{
 			format++;
 			length += find_specifier(arg, *format);
